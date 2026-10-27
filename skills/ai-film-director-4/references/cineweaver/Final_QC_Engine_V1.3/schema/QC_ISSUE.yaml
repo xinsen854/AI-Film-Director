@@ -1,0 +1,13 @@
+QC_ISSUE:
+  issue_id:
+  severity: BLOCKER | ERROR | WARNING | INFO
+  domain: COVERAGE | ASSET | SHOT | PROMPT | SPATIAL | CONTINUITY | LEDGER | DELIVERY
+  scene_id:
+  shot_id:
+  generation_unit_id:
+  asset_id:
+  rule:
+  evidence:
+  impact:
+  minimal_fix:
+  owner_layer: STORY | AUTHORITY | EMOTION | SCENE_INTELLIGENCE | ROUTER | DIRECTOR | ASSET | SPATIAL | SHOT_SEGMENT | DELIVERY

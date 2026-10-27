@@ -1,0 +1,131 @@
+storyboard_contract_version: '4.3'
+
+STORYBOARD_EDIT_SHOT_RESULT:
+  edit_shot_id: SH001
+  scene_id:
+  edit_shot_duration:
+  duration_basis: 由当前剧情动作、对白、表演和剪辑节奏决定；不得填写“模型上限”
+  generation_unit_id: GU001
+  source: {}
+  shot_function: {}
+  shot_type:
+  base_frame: {}
+  camera_parameters: {}
+  axis_and_gaze:
+    axis_line:
+    camera_side:
+    gaze: {}
+    screen_direction:
+    cross_axis_allowed: false
+    cross_axis_transition:
+  visual_asset_calls: []
+  spatial_blocking:
+    location_asset:
+    # Required only when current scene has a meaningful ACTIVE scene_geo_lock.
+    scene_geo_lock_ref:
+    scene_geo_sha256:
+    dramatic_purpose:
+    visibility_hearing:
+    start_positions: {}
+    frame_positions: {}
+    movement_path: {}
+    end_positions: {}
+    needs_space_diagram: false
+    space_diagram:  # only when needs_space_diagram=true
+      north: ↑
+      axis_line:
+      camera_side:
+      ascii_map: []
+      characters: []
+      camera:
+      props: []
+      entrances_exits: []
+      visibility_hearing:
+  continuous_visuals: []
+  first_last_frame_anchors: {}
+  key_micro_reactions: {}
+  dialogue_execution:
+    - speaker:
+      verbatim:
+      voice_profile_id: V001  # optional here when already resolved; final GU must carry it when the character has a V-series asset
+      mode: 画内 | 画外 | 旁白
+      lip_sync: true | false
+      camera_subject:
+      performance_strategy:
+      audible_emotion:
+      volume:
+      distance:
+      pace:
+      emphasis:
+      breath:
+      pause:
+  sound:
+    environment:
+    foley:
+    sync_sound:
+    spatial_acoustics:
+    bridge:
+    music_policy: 无BGM、无配乐、禁止自动情绪音乐
+  edit_interface: {}
+  continuity_locks: {}
+  next_shot_handoff:
+    type:
+    start_state: {}
+    do_not_reset: []
+    offscreen_carry:  # optional continuity aid for characters just departed before the next SH
+      - asset_id: A002
+        exit_side: frame-left
+        last_visible_state: still carrying the crate
+
+GENERATION_UNIT_RESULT:
+  generation_unit_id: GU001
+  target_video_model: SEEDANCE_2_5 | SEEDANCE_2_0 | OTHER
+  packing_policy: 15S | 30S_BLOCK | AUTO  # 最大窗口/组织策略，不是SH或GU固定时长
+  production_block_id:
+  mode: ISOLATED | MULTI_SHOT
+  model_supports_multi_shot: true | false | null  # MULTI_SHOT时必须由当前确认的模型/平台Profile明确为true；不得按模型名称猜测
+  duration:
+  model_call_max_seconds:
+  member_edit_shots: []
+  contains_explicit_cuts: false
+  active_media_references: []
+  voice_text_assets: [V001]
+  starting_state: {}
+  ending_state: {}
+  phases:
+    - phase_id: PH01
+      stage_goal:
+      image_and_camera:
+      action_and_physics:
+      performance_and_microreaction:
+      dialogue_execution:
+        - speaker:
+          verbatim:
+          voice_profile_id: V001  # required when the speaking character has a locked V-series asset
+          mode: 画内 | 画外 | 旁白
+          lip_sync: true | false
+          performance_strategy:
+          audible_emotion:
+          volume:
+          distance:
+          pace:
+          emphasis:
+          breath:
+          pause:
+      end_state:
+  critical_time_anchors: []
+  prompt_sections:
+    generation_goal:
+    reference_roles:
+      # Legacy string entries remain valid. Optional structured entry:
+      - asset_id: A001
+        media_ref: "@图片1"  # omit for text-only fallback
+        role: 人物视觉身份
+        inherits: []
+        excludes: []
+        fidelity: partial-preserve  # optional: full-preserve | partial-preserve | attribute-transfer | loose-guide
+        fidelity_target: null       # only for attribute-transfer
+    initial_state:
+    sound: {}
+    keep_consistent:
+    local_constraints:

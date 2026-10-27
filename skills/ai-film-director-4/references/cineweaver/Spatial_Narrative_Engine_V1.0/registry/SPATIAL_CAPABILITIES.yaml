@@ -1,0 +1,19 @@
+spatial_narrative_capabilities:
+  SPATIAL_TOPOLOGY:
+    purpose: zone graph and stable usable geography
+  ROUTE_PLANNING:
+    purpose: narratively relevant movement paths and detours
+  VISIBILITY_RELATION:
+    purpose: who can see/hear whom or what
+  OCCLUSION_CHOREOGRAPHY:
+    purpose: controlled partial/hidden/reveal relationships
+  LANDMARK_MEMORY:
+    purpose: spatial orientation and return recognition
+  THREAT_GEOGRAPHY:
+    purpose: sightline, surveillance, exposure, safe and blocked zones
+  REVEAL_STAGING:
+    purpose: latent/partial/readable/emphasized entity progression
+  FORESHADOW_PAYOFF:
+    purpose: prior presence and later narrative use
+  MOTIF_PROGRESSION:
+    purpose: repeated visual entity accumulating supported meaning

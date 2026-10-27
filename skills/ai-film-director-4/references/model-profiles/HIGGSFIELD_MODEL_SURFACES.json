@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "AFD_HIGGSFIELD_MODEL_SURFACES",
+  "policy": {
+    "source_dated": true,
+    "unknown_means_unknown": true,
+    "model_name_does_not_imply_capability": true
+  },
+  "profiles": {
+    "SEEDANCE_2_0_HIGGSFIELD": {
+      "public_name": "Seedance 2.0",
+      "provider": "Higgsfield",
+      "surface": "higgsfield",
+      "model_id": "seedance_2_0",
+      "duration_seconds": {
+        "min": 4,
+        "max": 15
+      },
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "modes": [
+        "std",
+        "fast"
+      ],
+      "aspect_ratios": [
+        "auto",
+        "16:9",
+        "9:16",
+        "4:3",
+        "3:4",
+        "1:1",
+        "21:9"
+      ],
+      "media_roles": [
+        "start_image",
+        "end_image",
+        "image_references",
+        "video_references",
+        "audio_references"
+      ],
+      "constraints": [
+        "fast forbids resolution 1080p/4k"
+      ],
+      "supports_multishot": "unknown",
+      "source": {
+        "repository": "OSideMedia/higgsfield-ai-prompt-skill",
+        "commit": "c0b73ab946df6658cca513db78bdc3909a655bfd",
+        "path": "specs/MODEL-SPECS.md",
+        "snapshot_date": "2026-08-07",
+        "verified_date": "2026-08-07"
+      }
+    },
+    "SEEDANCE_2_5_HIGGSFIELD": {
+      "public_name": "Seedance 2.5",
+      "provider": "Higgsfield",
+      "surface": "higgsfield",
+      "model_id": "seedance_2_5",
+      "duration_seconds": {
+        "min": 4,
+        "max": 30
+      },
+      "resolutions": [
+        "480p",
+        "720p"
+      ],
+      "modes": [
+        "t2v",
+        "omni_reference",
+        "video_edit",
+        "video_extension"
+      ],
+      "aspect_ratios": [
+        "auto",
+        "21:9",
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
+      ],
+      "media_roles": [
+        "image_references",
+        "video_references",
+        "audio_references"
+      ],
+      "constraints": [],
+      "supports_multishot": "unknown",
+      "source": {
+        "repository": "OSideMedia/higgsfield-ai-prompt-skill",
+        "commit": "c0b73ab946df6658cca513db78bdc3909a655bfd",
+        "path": "specs/MODEL-SPECS.md",
+        "snapshot_date": "2026-08-07",
+        "verified_date": "2026-08-07"
+      }
+    },
+    "OTHER_EXPLICIT": {
+      "public_name": "Explicit external model profile",
+      "provider": "explicit",
+      "surface": "explicit",
+      "model_id": null,
+      "duration_seconds": null,
+      "resolutions": null,
+      "modes": null,
+      "aspect_ratios": null,
+      "media_roles": null,
+      "constraints": [
+        "execution requires explicit verified adapter facts"
+      ],
+      "supports_multishot": "unknown",
+      "source": {
+        "repository": null,
+        "commit": null,
+        "path": null,
+        "snapshot_date": null,
+        "verified_date": null
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+SPATIAL_NARRATIVE_RESULT:
+  scene_id:
+  activation_state: ACTIVE | SUPPRESSED
+  activation_reason: []
+  capabilities_active: []
+  capabilities_suppressed: []
+
+  # Required when ACTIVE spatial topology contains stable scene geometry.
+  # Built deterministically from the authoritative S-location asset; no people/camera/blocking here.
+  scene_geo_lock:
+    lock_contract: AFD_SCENE_GEO_LOCK_V1
+    lock_id:
+    scene_id:
+    location_asset_id: S001
+    geo_sha256:
+    locked_fields: [stable_geography, functional_zones, landmark_anchors, entrances_exits]
+    locked_geometry:
+      stable_geography: {}
+      functional_zones: []
+      landmark_anchors: []
+      entrances_exits: []
+
+  space_topology:
+    zones: []
+    entrances: []
+    exits: []
+    vertical_relations: []
+    landmarks: []
+    occluders: []
+    threat_zones: []
+    safe_zones: []
+    visibility_relations: []
+    hearing_relations: []
+    character_routes: []
+    object_positions: []
+
+  reveal_ledger:
+    - entity_id:
+      narrative_role:
+      first_presence:
+      prior_presence_required:
+      stages: []
+      payoff:
+
+  motif_progression: []
+
+  shot_handoff:
+    - shot_id:
+      current_zone:
+      route_phase:
+      must_be_visible: []
+      may_be_latent: []
+      must_remain_hidden: []
+      occlusion_logic: []
+      visibility_relations: []
+      landmark_requirement: []
+      threat_state: []
+      reveal_stage_changes: []
+      spatial_continuity_must_preserve: []
+
+  confidence:
+  ambiguities: []

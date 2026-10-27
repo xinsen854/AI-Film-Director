@@ -1,0 +1,236 @@
+{
+  "type": "object",
+  "required": [
+    "project_id",
+    "work_format",
+    "source_maturity",
+    "aspect_ratio",
+    "target_video_model",
+    "screen_orientation",
+    "dialogue_language",
+    "ui_language_policy",
+    "confirmation_rounds",
+    "generation_organization",
+    "asset_production_mode",
+    "confirmation_status",
+    "visual_style_candidates",
+    "visual_style_choice",
+    "execution_mode",
+    "production_scope"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "work_format": {
+      "enum": [
+        "film",
+        "short_film",
+        "series",
+        "short_series",
+        "animation_film",
+        "animation_series",
+        "other"
+      ]
+    },
+    "source_maturity": {
+      "enum": [
+        "idea",
+        "outline",
+        "treatment",
+        "screenplay",
+        "existing_project"
+      ]
+    },
+    "target_total_runtime_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "episode_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "target_episode_runtime_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "minLength": 1
+    },
+    "screen_orientation": {
+      "enum": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "dialogue_language": {
+      "enum": [
+        "zh-CN",
+        "en"
+      ]
+    },
+    "ui_language_policy": {
+      "enum": [
+        "zh-CN",
+        "en",
+        "bilingual-zh-en"
+      ]
+    },
+    "confirmation_rounds": {
+      "const": 1
+    },
+    "period_world_mode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target_video_model": {
+      "enum": [
+        "SEEDANCE_2_5",
+        "SEEDANCE_2_0",
+        "OTHER"
+      ]
+    },
+    "generation_organization": {
+      "enum": [
+        "15S",
+        "30S_BLOCK",
+        "AUTO"
+      ]
+    },
+    "execution_mode": {
+      "enum": [
+        "FULL",
+        "QUICK"
+      ],
+      "default": "FULL"
+    },
+    "music_strategy": {
+      "enum": [
+        "NO_BGM",
+        "LOCKED_CUE",
+        "DESIGN_ALLOWED"
+      ],
+      "default": "NO_BGM"
+    },
+    "delivery_target": {
+      "enum": [
+        "PLANNING_AND_PROMPTS",
+        "PLANNING_PROMPTS_AND_IMAGES"
+      ],
+      "default": "PLANNING_AND_PROMPTS"
+    },
+    "model_call_max_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "asset_production_mode": {
+      "enum": [
+        "prompts_only",
+        "core_assets",
+        "all_required",
+        "mixed"
+      ]
+    },
+    "existing_media": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "visual_style_candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "option_id",
+          "label",
+          "description",
+          "recommended"
+        ],
+        "properties": {
+          "option_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommended": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "visual_style_choice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confirmation_status": {
+      "const": "confirmed"
+    },
+    "confirmed_brief": {
+      "type": "boolean"
+    },
+    "minimum_total_runtime_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "maximum_total_runtime_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "minimum_episode_runtime_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "maximum_episode_runtime_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "production_scope": {
+      "enum": [
+        "PROJECT",
+        "UNIT",
+        "PILOT"
+      ],
+      "default": "PROJECT"
+    }
+  },
+  "additionalProperties": true
+}

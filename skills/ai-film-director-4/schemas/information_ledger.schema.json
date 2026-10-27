@@ -1,0 +1,113 @@
+{
+  "type": "object",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "info_id",
+          "truth",
+          "character_knowledge",
+          "audience_state",
+          "reveal_stage",
+          "status"
+        ],
+        "properties": {
+          "info_id": {
+            "type": "string"
+          },
+          "truth": {
+            "type": "string"
+          },
+          "character_knowledge": {
+            "type": "object"
+          },
+          "audience_state": {
+            "type": "object",
+            "properties": {
+              "knows": {
+                "type": "array"
+              },
+              "believes": {
+                "type": "array"
+              },
+              "suspects": {
+                "type": "array"
+              },
+              "misbeliefs": {
+                "type": "array"
+              },
+              "hopes": {
+                "type": "array"
+              },
+              "fears": {
+                "type": "array"
+              }
+            },
+            "additionalProperties": true
+          },
+          "earliest_fair_reveal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "planned_reveal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "actual_reveal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "visible_clues": {
+            "type": "array"
+          },
+          "concealment_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "protected_literals": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "description": "Exact unrevealed strings that must not appear in prompts, including negative constraints, until status becomes REVEALED/REINTERPRETED."
+          },
+          "status": {
+            "enum": [
+              "HIDDEN",
+              "PARTIAL",
+              "REVEALED",
+              "REINTERPRETED"
+            ]
+          },
+          "reveal_stage": {
+            "enum": [
+              "OFFSCREEN",
+              "LATENT",
+              "PARTIAL",
+              "READABLE",
+              "EMPHASIZED",
+              "PAYOFF"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

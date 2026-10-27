@@ -1,0 +1,150 @@
+ASSET_LIBRARY:
+  source:
+    creative_bible_version:
+    locked_screenplay_version:
+    production_range:
+
+  project_asset_policy:
+    world_and_visual_style:
+    character_face_policy:
+    image_prompt_policy:
+    voice_asset_policy: "V-series text only; no media files; zero Seedance reference slots"
+
+  quick_index: []
+
+  character_assets:
+    - asset_id: A001
+      asset_family: A
+      asset_class: VISUAL_ASSET
+      name:
+      story_identity:
+      first_appearance:
+      reuse_scope: []
+      visual_identity:
+        silhouette:
+        hair:
+        base_wardrobe:
+        primary_colors:
+        distinguishing_marks: []
+      execution_anchor_summary:
+        identity:
+        silhouette:
+        wardrobe:
+        persistent_state:
+        distinguishing_marks: []
+        performance_identity:
+      image_file:
+      image_status: PROMPT_ONLY | GENERATED | FAILED | MISSING
+      view_coverage: []
+      image_prompt:
+      fixed_exclusions: []
+      downstream_metadata:
+        default_reference_role: identity
+        visual_cost_units: 1
+        seedance_reference_slot_cost: 1
+        generic_eligible: false
+      voice_asset_id: V001
+
+  voice_assets:
+    - asset_id: V001
+      asset_family: V
+      asset_class: TEXT_VOICE_ASSET
+      media_asset: false
+      character_asset_id: A001
+      name:
+      visual_cost_units: 0
+      seedance_reference_slot_cost: 0
+      image_file: null
+      audio_file: null
+      video_file: null
+      voice_profile:
+        source_status:
+        confidence:
+        perceived_age:
+        timbre:
+        pitch_tendency:
+        texture:
+        resonance:
+        vocal_weight:
+        pace:
+        rhythm:
+        breath_pattern:
+        articulation:
+        diction_clarity:
+        accent_or_regional_quality:
+        speech_habit:
+        sentence_shape:
+        emotional_leakage:
+        pressure_behavior:
+        volume_tendency:
+        prohibitions: []
+        evidence: []
+
+  persistent_states:
+    - state_id: A002-ST001
+      inherits_from: A002
+      state_category:
+      state_start:
+      state_end:
+      source_fact:
+      trigger_cause:
+      visible_change:
+      unchanged_facts: []
+      compatible_with: []
+      conflicts_with: []
+      persistent_scope: []
+      image_file:
+      image_status: PROMPT_ONLY | GENERATED | FAILED | MISSING
+      image_prompt:
+      downstream_metadata:
+        default_reference_role: state
+        visual_cost_units: 0_or_1
+        seedance_reference_slot_cost: 0_or_1
+        generic_eligible: false
+
+  location_assets:
+    - asset_id: S001
+      asset_family: S
+      asset_class: VISUAL_ASSET
+      name:
+      story_function:
+      reuse_scope: []
+      architecture_type:
+      materials_and_color:
+      view_coverage: []
+      stable_geography: {}
+      functional_zones: []
+      landmark_anchors: []
+      entrances_exits: []
+      image_file:
+      image_status: PROMPT_ONLY | GENERATED | FAILED | MISSING
+      image_prompt:
+      fixed_exclusions: []
+      downstream_metadata:
+        default_reference_role: location
+        visual_cost_units: 1
+        seedance_reference_slot_cost: 1
+        generic_eligible: false
+
+  prop_assets:
+    - asset_id: P001
+  g_assets:
+    - asset_id: G001
+
+  asset_engine_qc: {}
+
+# Optional supporting reference; nested under one existing visual asset's downstream_metadata.
+# This is not a new top-level asset family.
+SCALE_REFERENCE_EXAMPLE:
+  reference_id: SCALE-A001-G001
+  reference_role: scale
+  subject_asset_ids: [A001, G001]
+  activation_reason:
+  relative_scale:
+  image_prompt:
+  image_status: PROMPT_ONLY | GENERATED | FAILED | MISSING
+  image_file:
+  inherits: [relative_scale]
+  excludes: []
+  use_scope: []
+  dependencies: [A001, G001]

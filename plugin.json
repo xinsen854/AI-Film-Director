@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ai-film-director",
+  "version": "4.7.1",
+  "description": "Emotion-driven narrative, screenplay, directing, asset and storyboard production with explicit story authority, evidence-backed emotional causality and gated QC.",
+  "author": { "name": "xinsen854" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AI Film Director 4.7.1 Fusion",
+        "shortDescription": "Emotion-driven AI filmmaking",
+        "longDescription": "A story- and emotion-centered film directing framework with Forge, CineWeaver, a 20-stage orchestrator and verifiable production deliverables.",
+        "developerName": "xinsen854",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": "使用 AI Film Director 4.7.1 Fusion 读取我的影视材料，从 Forge 的故事与情绪审计开始，按总控闸门生成导演与分镜生产交付。"
+      }
+    }
+  }
+}

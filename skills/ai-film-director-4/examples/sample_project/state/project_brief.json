@@ -1,0 +1,42 @@
+{
+  "project_id": "STORY_DRIVEN_30S_SAMPLE",
+  "work_format": "short_film",
+  "source_maturity": "screenplay",
+  "target_total_runtime_seconds": 30,
+  "aspect_ratio": "16:9",
+  "screen_orientation": "horizontal",
+  "dialogue_language": "zh-CN",
+  "ui_language_policy": "bilingual-zh-en",
+  "confirmation_rounds": 1,
+  "target_video_model": "SEEDANCE_2_5",
+  "generation_organization": "30S_BLOCK",
+  "model_call_max_seconds": 30,
+  "execution_mode": "QUICK",
+  "music_strategy": "NO_BGM",
+  "delivery_target": "PLANNING_AND_PROMPTS",
+  "asset_production_mode": "prompts_only",
+  "visual_style_candidates": [
+    {
+      "option_id": "V1",
+      "label": "冷静写实",
+      "description": "自然光与克制机位",
+      "recommended": true
+    },
+    {
+      "option_id": "V2",
+      "label": "轻悬疑",
+      "description": "低对比度缓慢推进",
+      "recommended": false
+    },
+    {
+      "option_id": "V3",
+      "label": "观察式",
+      "description": "固定机位强调动作结果",
+      "recommended": false
+    }
+  ],
+  "visual_style_choice": "V1",
+  "confirmation_status": "confirmed",
+  "confirmed_brief": true,
+  "production_scope": "PROJECT"
+}

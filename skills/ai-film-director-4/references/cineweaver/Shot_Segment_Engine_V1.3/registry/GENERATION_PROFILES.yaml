@@ -1,0 +1,38 @@
+model_profiles:
+  SEEDANCE_2_5:
+    public_name: Seedance 2.5
+    model_call_max_seconds: 30
+    prompt_structure: PHASE_FIRST
+    full_timeline_default: false
+    critical_time_anchor_allowed: true
+    surface_profile: SEEDANCE_2_5_HIGGSFIELD
+    dialect_contract: references/cineweaver/Shot_Segment_Engine_V1.3/runtime/SEEDANCE_2_5_PROFILE.md
+  SEEDANCE_2_0:
+    public_name: Seedance 2.0
+    model_call_max_seconds: 15
+    prompt_structure: PHASE_FIRST
+    full_timeline_default: false
+    critical_time_anchor_allowed: true
+    surface_profile: SEEDANCE_2_0_HIGGSFIELD
+    dialect_contract: references/cineweaver/Shot_Segment_Engine_V1.3/runtime/SEEDANCE_2_0_PROFILE.md
+  OTHER:
+    model_call_max_seconds: REQUIRE_EXPLICIT_ADAPTER
+packing_policies:
+  15S:
+    generation_unit_max_seconds: 15
+    fill_window_required: false
+    edit_shot_duration_quantized: false
+  30S_BLOCK:
+    production_block_max_seconds: 30
+    fill_window_required: false
+    edit_shot_duration_quantized: false
+    direct_single_unit_when_model_allows: true
+  AUTO:
+    generation_unit_max_seconds: active_model_adapter
+    fill_window_required: false
+    edit_shot_duration_quantized: false
+    isolation_priority: enabled
+    multi_shot_packing: enabled_when_safe
+reference_budget:
+  source_of_truth: MODEL_OR_PROJECT_PROFILE
+  voice_text_seedance_reference_slot_cost: 0

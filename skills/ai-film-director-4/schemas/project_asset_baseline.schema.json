@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AFD Project Asset Baseline Lock V1",
+  "type":"object",
+  "required":["baseline_contract","scope_manifest_sha256","requirements_manifest_sha256","baseline_asset_ids","baseline_requirement_bindings","asset_identity_snapshot","baseline_lock_sha256"],
+  "properties":{
+    "baseline_contract":{"const":"AFD_PROJECT_ASSET_BASELINE_LOCK_V1"},
+    "scope_manifest_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "requirements_manifest_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "baseline_asset_ids":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "baseline_requirement_bindings":{"type":"object"},"asset_identity_snapshot":{"type":"object"},
+    "baseline_lock_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}
+  },"additionalProperties":false
+}

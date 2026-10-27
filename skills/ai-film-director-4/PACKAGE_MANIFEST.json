@@ -1,0 +1,111 @@
+{
+  "package": "ai-film-director",
+  "edition": "AI-Film-Director-4.7.1-Fusion",
+  "package_version": "4.7.1-fusion",
+  "installable_skill": "SKILL.md",
+  "internal_modules": [
+    "project-intake",
+    "story-development",
+    "screenplay-authority",
+    "audience-emotion-architecture",
+    "audience-emotion-causality",
+    "scene-direction",
+    "asset-production",
+    "quality-delivery"
+  ],
+  "cineweaver_engines": [
+    "CineKernel_V1.0",
+    "Scene_Intelligence_V1.0",
+    "Capability_Router_V1.1",
+    "Director_Craft_Engine_V1.0",
+    "Spatial_Narrative_Engine_V1.0",
+    "Asset_Engine_V4.1",
+    "Shot_Segment_Engine_V1.3",
+    "Final_QC_Engine_V1.3"
+  ],
+  "storyboard_authority": "CineWeaver Shot/Segment Engine V1.3",
+  "asset_authority": "CineWeaver Asset Engine V4.1",
+  "storyboard_renderer": "scripts/render_storyboard.py",
+  "asset_renderer": "scripts/render_asset_library.py",
+  "emotion_renderer": "scripts/render_emotion_map.py",
+  "story_coverage_renderer": "scripts/render_story_coverage.py",
+  "strict_contract_versions": {
+    "storyboard": "4.3",
+    "asset_library": "4.3",
+    "emotion_architecture": "4.3-compatibility-projection-only",
+    "forge_locked_audit": "v1.1.4"
+  },
+  "generation_profiles_reference": "references/cineweaver/Shot_Segment_Engine_V1.3/registry/GENERATION_PROFILES.yaml",
+  "asset_id_scheme": {
+    "A": "core_character",
+    "B": "supporting_character",
+    "G": "group_or_entity",
+    "S": "location",
+    "P": "prop",
+    "V": "text_voice_profile",
+    "persistent_state": "<master_id>-ST###"
+  },
+  "asset_generation_statuses": [
+    "GENERATED",
+    "PROMPT_ONLY",
+    "FAILED",
+    "MISSING"
+  ],
+  "delivery_files": [
+    "01_项目需求确认单.md",
+    "02_剧本审查与修改结论.md",
+    "03_正式编剧剧本.md",
+    "04_整合导演剧本.md",
+    "05_双层情绪规划图.html",
+    "06_资产总表与详细生成提示词.md",
+    "07_正式分镜与视频模型最终Prompt.md",
+    "08_Story_Coverage_Ledger.html"
+  ],
+  "integrity_manifest": "MANIFEST.sha256",
+  "asset_engine_version": "4.1",
+  "shot_segment_engine_version": "1.3",
+  "final_qc_engine_version": "1.3",
+  "python_requires": ">=3.10",
+  "runtime_requirements": "requirements.txt",
+  "test_requirements": "requirements-test.txt",
+  "pipeline_runner": "scripts/run_pipeline.py",
+  "execution_modes": [
+    "FULL",
+    "QUICK"
+  ],
+  "example_project": "examples/sample_project",
+  "media_execution_boundary": {
+    "direct_video_generation": false,
+    "direct_tts_or_final_audio_generation": false,
+    "visual_asset_generation": "only_when_host_provides_a_real_image_tool"
+  },
+  "release_validator": "scripts/verify_release.py",
+  "regression_suite": "tests/",
+  "fusion_build": "AFD-Master-Orchestrator-Forge-v1.1",
+  "master_orchestrator": "scripts/master_orchestrator.py",
+  "master_orchestrator_schema": "schemas/master_orchestrator_state.schema.json",
+  "forge_source_version": "v1.1.4",
+  "forge_source_provenance": "references/forge/SOURCE_PROVENANCE.json",
+  "forge_internal_modules": [
+    "references/forge/design.md",
+    "references/forge/human-truth-screenwriter.md",
+    "references/forge/gate.md",
+    "references/forge/audit.md",
+    "references/forge/emotion-renderer.md"
+  ],
+  "forge_handoff_compiler": "scripts/compile_forge_handoff.py",
+  "emotion_truth_source": "state/forge_locked_audit.json",
+  "emotion_compatibility_projection": "state/audience_emotion_architecture.json",
+  "fusion_reverse_audit": "scripts/verify_master_fusion.py",
+  "model_surface_profiles_reference": "references/model-profiles/HIGGSFIELD_MODEL_SURFACES.json",
+  "model_surface_source_provenance": "references/model-profiles/SOURCE_PROVENANCE.md",
+  "model_preflight": "scripts/model_preflight.py",
+  "project_scope_schema": "schemas/project_scope.schema.json",
+  "project_scope_builder": "scripts/project_scope.py",
+  "production_unit_packet_builder": "scripts/build_unit_packet.py",
+  "production_unit_packet_validator": "scripts/validate_unit_packet.py",
+  "project_asset_requirements_schema": "schemas/project_asset_requirements.schema.json",
+  "project_asset_baseline_schema": "schemas/project_asset_baseline.schema.json",
+  "project_asset_baseline_validator": "scripts/project_asset_baseline.py",
+  "project_hard_qc": "scripts/hard_delivery_qc.py"
+}

@@ -1,0 +1,43 @@
+asset_families:
+  A:
+    label: CORE_CHARACTER
+    default_reference_role: identity
+    default_visual_cost_units: 1
+  B:
+    label: RECURRING_CHARACTER
+    default_reference_role: identity
+    default_visual_cost_units: 1
+  G:
+    label: CREATURE_ENTITY_CROWD
+    default_reference_role_by_type:
+      CREATURE: identity
+      ENTITY: identity
+      CROWD: crowd
+      EXTRA_GROUP: crowd
+    default_visual_cost_units: 1
+  S:
+    label: LOCATION
+    default_reference_role: location
+    default_visual_cost_units: 1
+  P:
+    label: KEY_PROP
+    default_reference_role: prop
+    default_visual_cost_units: 1
+  V:
+    label: TEXT_VOICE_ASSET
+    default_reference_role: voice_text
+    media_asset: false
+    default_visual_cost_units: 0
+    seedance_reference_slot_cost: 0
+  STATE:
+    label: PERSISTENT_STATE
+    default_reference_role: state
+    visual_cost_rule: 0_without_separate_reference__1_with_dedicated_state_reference
+
+supporting_reference_roles:
+  scale:
+    label: RELATIVE_SCALE_REFERENCE
+    master_asset_family: false
+    default_inherits:
+      - relative_scale
+    note: "Only for necessary cross-subject scale stabilization; not globally mandatory."

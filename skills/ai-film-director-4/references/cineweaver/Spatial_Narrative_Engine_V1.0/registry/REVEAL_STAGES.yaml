@@ -1,0 +1,7 @@
+reveal_stages:
+  - OFFSCREEN
+  - LATENT
+  - PARTIAL
+  - READABLE
+  - EMPHASIZED
+  - PAYOFF

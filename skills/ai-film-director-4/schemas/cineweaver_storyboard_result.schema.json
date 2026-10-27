@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CineWeaver V1.5 Shot/Segment V1.3 structured storyboard payload",
+  "type": "object",
+  "required": ["edit_shots", "generation_units"],
+  "properties": {
+    "edit_shots": {"type": "array", "minItems": 1},
+    "generation_units": {"type": "array", "minItems": 1}
+  },
+  "additionalProperties": false,
+  "x-authoritative-reference": "references/cineweaver/Shot_Segment_Engine_V1.3/schema/STORYBOARD_SHOT_RESULT.yaml",
+  "x-runtime-validator": "scripts/validate_cineweaver_storyboard.py"
+}

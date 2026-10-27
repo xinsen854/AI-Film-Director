@@ -1,0 +1,11 @@
+interface:
+  display_name: AI Film Director 4.7.1 Fusion
+  short_description: Master总控调度Forge故事/编剧/情绪与AFD导演、资产、分镜、QC八件套
+  default_prompt: 使用 $ai-film-director-4 直接读取我提供的影视材料并进入生产执行模式；不要介绍能力或流程。由 AFD MASTER
+    ORCHESTRATOR 按固定顺序调度 Forge DESIGN → Human-Truth Screenwriter → Forge QC/锁稿/AUDIT/情绪图谱
+    → CineWeaver/AFD生产下游。一次性问完真正阻断生产的规格并确认 script_lock_policy，汇总我的回答只确认一次，随后按Gate连续完成八件正式交付。未选择视频模型时默认Seedance
+    2.0。镜头时长必须由剧情和剪辑决定，15S/30S仅是GU最大窗口。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true

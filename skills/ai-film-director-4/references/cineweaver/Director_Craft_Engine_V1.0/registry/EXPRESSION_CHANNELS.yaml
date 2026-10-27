@@ -1,0 +1,22 @@
+policy:
+  channels_are_options_not_requirements: true
+  beat_decides_activation: true
+  prefer_high_information_carriers: true
+
+channels:
+  - FACE
+  - EYES
+  - BREATH
+  - VOICE
+  - HANDS
+  - BODY
+  - DISTANCE
+  - TOUCH
+  - GAZE
+  - POSTURE
+  - OBJECT_INTERACTION
+  - SPEECH_RHYTHM
+  - PAUSE
+  - STILLNESS
+  - MOVEMENT
+  - REACTION

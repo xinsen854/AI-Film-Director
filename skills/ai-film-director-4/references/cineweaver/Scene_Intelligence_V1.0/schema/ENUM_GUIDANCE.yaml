@@ -1,0 +1,84 @@
+policy:
+  labels_are_guidance_not_closed_enum: true
+  custom_labels_allowed: true
+  do_not_force_label_when_plain_language_is_clearer: true
+
+dramatic_function_guidance:
+  - establish
+  - setup
+  - reveal
+  - confrontation
+  - decision
+  - reversal
+  - relationship_shift
+  - emotional_payoff
+  - escalation
+  - aftermath
+  - transition
+  - information_delivery
+  - character_exposure
+  - moral_choice
+  - separation
+  - reunion
+  - commitment
+  - failure
+  - sacrifice
+
+interaction_form_guidance:
+  - solo
+  - two_person_dialogue
+  - multi_person_dialogue
+  - ensemble
+  - confrontation
+  - negotiation
+  - observation
+  - pursuit
+  - fight
+  - chase
+  - ritual
+  - discovery
+  - waiting
+  - caregiving
+  - parallel_action
+  - silent_interaction
+  - montage
+  - transition
+  - physical_action
+
+emotional_mechanism_guidance:
+  - restrained_grief
+  - shame
+  - emotional_avoidance
+  - fear_of_dependency
+  - unresolved_wound
+  - longing
+  - betrayal
+  - guilt
+  - jealousy
+  - humiliation
+  - protective_love
+  - helplessness
+  - suppressed_anger
+  - relief_after_tension
+  - dread
+  - anticipation
+  - absurdity
+  - comedic_escalation
+
+space_function_guidance:
+  - neutral_background
+  - identity_extension
+  - power_structure
+  - memory_container
+  - emotional_pressure
+  - obstacle
+  - concealment
+  - separation
+  - intimacy_container
+  - public_pressure
+  - symbolic_object_system
+
+risk_levels:
+  - low
+  - medium
+  - high

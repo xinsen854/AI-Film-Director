@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "required": ["schema_version", "project_id", "scope_type", "status", "coverage", "next_resume"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string", "minLength": 1},
+    "scope_type": {"enum": ["film_timeline", "episodes"]},
+    "status": {"enum": ["IN_PROGRESS", "COMPLETED"]},
+    "target_runtime_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "film_units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "start_seconds", "end_seconds", "status"],
+        "properties": {
+          "unit_id": {"type": "string"},
+          "start_seconds": {"type": "number", "minimum": 0},
+          "end_seconds": {"type": "number", "exclusiveMinimum": 0},
+          "status": {"const": "COMPLETE"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "completed_units": {"type": "array", "items": {"type": "string"}},
+    "target_episode_count": {"type": "integer", "minimum": 1},
+    "target_episode_runtime_seconds": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "episodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["episode_id", "status"],
+        "properties": {
+          "episode_id": {"type": "string", "pattern": "^EP[0-9]+$"},
+          "status": {"const": "COMPLETE"},
+          "actual_runtime_seconds": {"type": "number", "exclusiveMinimum": 0}
+        },
+        "additionalProperties": true
+      }
+    },
+    "completed_episodes": {"type": "array", "items": {"type": "string"}},
+    "coverage": {"type": "object"},
+    "next_resume": {"type": "object"}
+  },
+  "additionalProperties": true
+}

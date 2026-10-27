@@ -1,0 +1,19 @@
+cut_types:
+  CS:
+    name: State Carry
+    meaning: preserve state into next SHOT
+  RC:
+    name: Reaction Cut
+    meaning: cut to receiver reaction
+  AR:
+    name: Action Result Cut
+    meaning: cut to action consequence/result
+  CC:
+    name: Coverage Cut
+    meaning: same dramatic moment with new coverage
+  AB:
+    name: Action Bridge
+    meaning: continue one action across separate generation units
+  ST:
+    name: Scene/Time Transition
+    meaning: enter a new scene or time state

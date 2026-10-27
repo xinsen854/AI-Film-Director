@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AFD Master Orchestrator State",
+  "type": "object",
+  "required": [
+    "orchestrator_contract",
+    "current_stage",
+    "stage_status",
+    "script_lock_policy",
+    "lock_status",
+    "history"
+  ],
+  "properties": {
+    "orchestrator_contract": {
+      "const": "AFD_MASTER_ORCHESTRATOR_V1"
+    },
+    "script_lock_policy": {
+      "enum": [
+        "REVIEW_BEFORE_LOCK",
+        "AUTO_ACCEPT_AFTER_QC"
+      ]
+    },
+    "lock_status": {
+      "enum": [
+        "DRAFT",
+        "LOCKED"
+      ]
+    },
+    "history": {
+      "type": "array"
+    },
+    "current_stage": {
+      "type": "string"
+    },
+    "stage_status": {
+      "type": "string"
+    },
+    "next_stage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lock_candidate_path": {
+      "type": "string"
+    },
+    "lock_candidate_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "locked_screenplay_path": {
+      "type": "string"
+    },
+    "locked_screenplay_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "spatial_required": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "rerun": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "project_scope_active": {
+      "type": "boolean"
+    },
+    "project_stage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scope_manifest_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "planned_units": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^PU[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "completed_units": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^PU[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "current_unit_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^PU[0-9]{3}$"
+    },
+    "unit_stage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project_asset_requirements_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "project_asset_baseline_lock_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

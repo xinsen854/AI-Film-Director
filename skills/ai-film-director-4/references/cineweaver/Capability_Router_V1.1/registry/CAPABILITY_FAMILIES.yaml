@@ -1,0 +1,78 @@
+version: "1.1"
+
+families:
+
+  performance_and_craft:
+    downstream:
+      - performance_engine
+      - director_craft_engine
+    capabilities:
+      - OBJECTIVE
+      - OBSTACLE
+      - STAKES
+      - TACTIC
+      - TACTIC_SHIFT
+      - BEAT_CHANGE
+      - SUBTEXT
+      - LISTENING_REACTION
+      - REACTION
+      - EYE_LIFE
+      - PROXEMICS
+      - STATUS_BEHAVIOR
+      - RESTRAINT
+      - PHYSICAL_BUSINESS
+      - PERFORMANCE_IDENTITY
+      - POWER_SHIFT
+      - INFORMATION
+      - RHYTHM
+      - SPACE
+      - ACTION
+
+  generation:
+    downstream:
+      - cinekernel
+    capabilities:
+      - CONTEXT_ISOLATION
+      - SPATIAL_MAP
+      - AXIS_CONTROL
+      - GAZE_BODY_ORIENTATION
+      - FIRST_FRAME_CONTROL
+      - ACTION_CAPACITY
+      - ACTION_TIMING
+      - PHYSICAL_CAUSALITY
+      - LIGHT_DIRECTION
+      - DIALOGUE_LOCK
+      - AUDIO_LOCK
+      - LOCAL_CONSTRAINT
+      - PROMPT_DENSITY_CONTROL
+
+  asset:
+    downstream:
+      - asset_engine
+      - cinekernel
+    capabilities:
+      - ASSET_NECESSITY_GATE
+      - CHARACTER_IDENTITY_MASTER
+      - VISUAL_STATE_ASSET
+      - LOCATION_IDENTITY
+      - LOCATION_STATE
+      - PROP_IDENTITY
+      - PROP_STATE
+      - SPATIAL_ASSET_COVERAGE
+      - REFERENCE_ROLE_BINDING
+      - ASSET_STRESS_TEST
+
+
+  spatial_narrative:
+    downstream:
+      - spatial_narrative_engine
+    capabilities:
+      - SPATIAL_TOPOLOGY
+      - ROUTE_PLANNING
+      - VISIBILITY_RELATION
+      - OCCLUSION_CHOREOGRAPHY
+      - LANDMARK_MEMORY
+      - THREAT_GEOGRAPHY
+      - REVEAL_STAGING
+      - FORESHADOW_PAYOFF
+      - MOTIF_PROGRESSION

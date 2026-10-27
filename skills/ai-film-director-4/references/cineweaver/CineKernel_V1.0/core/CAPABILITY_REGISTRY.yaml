@@ -1,0 +1,277 @@
+version: "1.0"
+name: "CineKernel"
+status: "FROZEN"
+philosophy: "Minimum Necessary Control"
+
+capabilities:
+
+  - id: ASSET_NECESSITY_GATE
+    owner: ASSET_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["any_new_asset_request"]
+    purpose: "Decide whether a separate asset is actually necessary."
+
+  - id: CHARACTER_IDENTITY_MASTER
+    owner: ASSET_ENGINE
+    default: CONDITIONAL
+    control_level: HARD
+    trigger: ["recurring_character", "identity_consistency_required"]
+
+  - id: VISUAL_STATE_ASSET
+    owner: ASSET_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger:
+      - "persistent_costume_change"
+      - "persistent_injury_or_blood"
+      - "persistent_wet_state"
+      - "age_stage_change"
+      - "high_visual_continuity_risk"
+    excludes:
+      - "emotion"
+      - "subtext"
+      - "temporary_performance_state"
+
+  - id: LOCATION_IDENTITY
+    owner: ASSET_ENGINE
+    default: CONDITIONAL
+    control_level: HARD
+    trigger: ["recurring_location", "spatial_continuity_required"]
+
+  - id: LOCATION_STATE
+    owner: ASSET_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["persistent_day_night_rain_or_major_environment_state"]
+
+  - id: PROP_IDENTITY
+    owner: ASSET_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["story_critical_prop", "repeat_prop", "appearance_must_match"]
+
+  - id: PROP_STATE
+    owner: ASSET_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["damage_state", "hidden_state", "bloodied_state", "closeup_specific_state"]
+
+  - id: SPATIAL_ASSET_COVERAGE
+    owner: ASSET_ENGINE
+    default: CONDITIONAL
+    control_level: INTERNAL
+    trigger: ["shot_plan_requires_uncovered_angle", "reverse_angle_needed"]
+
+  - id: REFERENCE_ROLE_BINDING
+    owner: ASSET_ENGINE
+    default: ON
+    control_level: HARD
+    trigger: ["reference_asset_used"]
+
+  - id: NON_DESTRUCTIVE_ASSET_LINEAGE
+    owner: ASSET_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["asset_revision", "state_derivation"]
+
+  - id: ASSET_STRESS_TEST
+    owner: ASSET_ENGINE
+    default: CONDITIONAL
+    control_level: INTERNAL
+    trigger: ["asset_reuse_high", "identity_risk_high", "ensemble_use"]
+
+  - id: OBJECTIVE
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: INTERNAL
+    trigger: ["dramatic_character_scene", "dialogue", "conflict"]
+
+  - id: OBSTACLE
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: INTERNAL
+    trigger: ["dramatic_character_scene", "conflict"]
+
+  - id: STAKES
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: INTERNAL
+    trigger: ["dramatic_scene", "decision_scene"]
+
+  - id: TACTIC
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: SOFT
+    trigger: ["dialogue", "negotiation", "confrontation"]
+
+  - id: TACTIC_SHIFT
+    owner: PERFORMANCE_ENGINE
+    default: OFF
+    control_level: SOFT
+    trigger: ["tactic_fails", "beat_change"]
+
+  - id: BEAT_CHANGE
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: SOFT
+    trigger: ["new_information", "power_shift", "objective_change", "tactic_failure"]
+
+  - id: SUBTEXT
+    owner: PERFORMANCE_ENGINE
+    default: OFF
+    control_level: SOFT
+    trigger: ["restrained_drama", "relationship_scene", "hidden_intent"]
+
+  - id: LISTENING_REACTION
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: SOFT
+    trigger: ["dialogue", "reaction_beat", "ensemble_scene"]
+
+  - id: EYE_LIFE
+    owner: PERFORMANCE_ENGINE
+    default: OFF
+    control_level: SOFT
+    trigger: ["closeup", "emotional_reaction", "dead_eye_risk"]
+
+  - id: PROXEMICS
+    owner: PERFORMANCE_ENGINE
+    default: OFF
+    control_level: SOFT
+    trigger: ["relationship_distance_matters", "power_shift", "blocking_storytelling"]
+
+  - id: STATUS_BEHAVIOR
+    owner: PERFORMANCE_ENGINE
+    default: OFF
+    control_level: SOFT
+    trigger: ["dominance_change", "hierarchy_scene"]
+
+  - id: PHYSICAL_BUSINESS
+    owner: PERFORMANCE_ENGINE
+    default: OFF
+    control_level: SOFT
+    trigger: ["dialogue_feels_stagey", "behavioral_subtext_needed"]
+
+  - id: PERFORMANCE_IDENTITY
+    owner: PERFORMANCE_ENGINE
+    default: CONDITIONAL
+    control_level: INTERNAL
+    trigger: ["recurring_character"]
+
+  - id: CONTEXT_ISOLATION
+    owner: GENERATION_ENGINE
+    default: ON
+    control_level: HARD
+    trigger: ["every_shot_compile"]
+
+  - id: SPATIAL_MAP
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD_OR_SOFT
+    trigger: ["multi_character", "complex_location", "swap_risk", "axis_risk"]
+
+  - id: AXIS_CONTROL
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["dialogue_coverage", "screen_direction_story_critical", "axis_risk_high"]
+
+  - id: GAZE_BODY_ORIENTATION
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD_OR_SOFT
+    trigger: ["relationship_scene", "gaze_risk", "body_orientation_ambiguity"]
+
+  - id: FIRST_FRAME_CONTROL
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["wrong_opening_risk_high", "subject_delayed_risk_high", "position_reset_risk"]
+    note: "Generation-risk tool, not a universal film-language rule."
+
+  - id: FORMAT_DECISION
+    owner: GENERATION_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["every_shot_compile"]
+    default_choice: "SINGLE_CONTINUOUS_TAKE"
+
+  - id: CUT_CONTINUITY
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["controlled_multishot"]
+
+  - id: OPTICAL_INTENT
+    owner: GENERATION_ENGINE
+    default: CONDITIONAL
+    control_level: SOFT
+    trigger: ["optics_matters_to_story_or_emotion"]
+    note: "Model Profile translates intent to mm/FOV/model-native language."
+
+  - id: CAMERA_BEHAVIOR
+    owner: GENERATION_ENGINE
+    default: CONDITIONAL
+    control_level: SOFT
+    trigger: ["camera_energy_matters", "director_intent_requires"]
+
+  - id: ACTION_CAPACITY
+    owner: GENERATION_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["action_present"]
+
+  - id: ACTION_TIMING
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD_OR_SOFT
+    trigger: ["complex_action", "timing_risk", "multibeat_shot"]
+
+  - id: PHYSICAL_CAUSALITY
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["impact", "fall", "fight", "vehicle", "object_interaction", "physics_risk"]
+
+  - id: LIGHT_DIRECTION
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD_OR_SOFT
+    trigger: ["lighting_direction_story_critical", "flat_light_failure_history"]
+
+  - id: DIALOGUE_LOCK
+    owner: GENERATION_ENGINE
+    default: CONDITIONAL
+    control_level: HARD
+    trigger: ["spoken_dialogue"]
+
+  - id: AUDIO_LOCK
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD_OR_SOFT
+    trigger: ["audio_continuity_critical", "silence_critical", "sfx_critical"]
+
+  - id: RISK_DIAGNOSIS
+    owner: GENERATION_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["every_shot_compile"]
+
+  - id: LOCAL_CONSTRAINT
+    owner: GENERATION_ENGINE
+    default: OFF
+    control_level: HARD
+    trigger: ["specific_failure_risk_detected"]
+
+  - id: PROMPT_DENSITY_CONTROL
+    owner: GENERATION_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["every_prompt_compile"]
+
+  - id: SILENT_QA
+    owner: GENERATION_ENGINE
+    default: ON
+    control_level: INTERNAL
+    trigger: ["before_delivery"]

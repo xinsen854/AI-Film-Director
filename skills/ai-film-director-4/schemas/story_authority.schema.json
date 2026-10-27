@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "required": ["atoms"],
+  "properties": {
+    "atoms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["atom_id", "unit_id", "scene_id", "type", "content", "locked"],
+        "properties": {
+          "atom_id": {"type": "string"},
+          "unit_id": {"type": "string"},
+          "scene_id": {"type": "string"},
+          "type": {"enum": ["action", "dialogue", "reaction", "event", "result", "transition"]},
+          "content": {"type": "string"},
+          "story_basis": {"type": "string"},
+          "locked": {"type": "boolean"},
+          "visual_coverage_required": {"type": "boolean"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

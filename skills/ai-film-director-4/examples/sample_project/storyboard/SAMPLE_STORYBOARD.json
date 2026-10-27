@@ -1,0 +1,76 @@
+{
+  "edit_shots": [
+    {
+      "edit_shot_id": "SH001",
+      "scene_id": "SC01",
+      "edit_shot_duration": 11.5,
+      "duration_basis": "人物发现信件、停步、确认四周并压住第一反应需要完整可读",
+      "generation_unit_id": "GU001",
+      "source": {"scene_id": "SC01", "story_range": "人物发现桌上的信", "director_beat": "发现与防御"},
+      "shot_function": {"primary": "建立发现", "change_after_shot": "人物从日常状态进入警觉"},
+      "shot_type": "MS",
+      "base_frame": {"location_time": "室内傍晚", "functional_zone": "桌边", "framing_and_position": "人物在画面左侧，信在右前景"},
+      "camera_parameters": {"camera_behavior": "缓慢前移", "perspective": "正常透视", "height": "眼平", "angle": "平视", "depth_focus": "人物与信依次清晰", "composition": "人物和信形成斜线", "layers": "门框前景、人物中景、桌面后景", "look_motion_room": "人物视线方向留白"},
+      "axis_and_gaze": {"axis": "AXIS-1", "camera_side": "A", "gaze": "从门口移到信", "screen_direction": "L2R", "cross_axis_allowed": false, "cross_axis_transition": "无"},
+      "visual_asset_calls": [],
+      "spatial_blocking": {"location_asset": "文字场景身份：普通公寓客厅", "dramatic_purpose": "让发现动作清楚", "visibility_hearing": "人物可见桌面、听见室外电梯声", "start_positions": "门边", "frame_positions": "画面左侧", "movement_path": "向桌边两步", "end_positions": "桌前半步", "needs_space_diagram": false},
+      "continuous_visuals": ["进门", "发现信", "停步", "确认四周"],
+      "first_last_frame_anchors": {"first_frame": "人物刚进门，双手空", "last_frame": "人物停在桌前半步，右手仍垂下", "locked_between": "服装、信件位置和右手状态不变"},
+      "key_micro_reactions": {"stimulus": "看到信", "first_reaction": "视线骤停", "control": "压低呼吸并看向门口", "final_action": "重新看向信"},
+      "dialogue_execution": [],
+      "sound": {"onscreen": "鞋底与地板摩擦", "ambience": "室内底噪和远处电梯", "special": "无", "bridge": "电梯声延续到下一镜", "music_policy": "无BGM"},
+      "edit_interface": {"cut_in": "门锁声后", "cut_out": "视线落回信件", "action_match": true, "gaze_match": true, "sound_lead": false},
+      "continuity_locks": {"wardrobe": "深色外套", "injury_wet_dirt": "无", "hair_face": "略疲惫", "hand_props": "双手空", "orientation_screen": "面向右", "physical_position": "桌前半步", "light_time_weather": "傍晚室内自然光", "other_state": "警觉", "known_information": "只知道信件突然出现", "forbidden_future": "不得显示信件内容", "world_ability_limits": "现实规则"},
+      "next_shot_handoff": {"type": "视线匹配切", "start_state": "人物停在桌前半步", "do_not_reset": "右手、信件位置和警觉状态"}
+    },
+    {
+      "edit_shot_id": "SH002",
+      "scene_id": "SC01",
+      "edit_shot_duration": 18.5,
+      "duration_basis": "从犹疑伸手到最终拆信包含两次撤回和一次明确选择，不能按窗口机械截断",
+      "generation_unit_id": "GU001",
+      "source": {"scene_id": "SC01", "story_range": "人物决定拆信", "director_beat": "犹疑转为选择"},
+      "shot_function": {"primary": "完成选择", "change_after_shot": "人物承担打开信件的后果"},
+      "shot_type": "CU",
+      "base_frame": {"location_time": "室内傍晚", "functional_zone": "桌面", "framing_and_position": "手、信和下颌进入近景"},
+      "camera_parameters": {"camera_behavior": "固定后轻微跟手", "perspective": "正常近摄", "height": "胸口高度", "angle": "轻微俯视", "depth_focus": "信封边缘与手指清晰", "composition": "信在中心偏右", "layers": "手前景、信中景、人物下颌后景", "look_motion_room": "手的移动方向留白"},
+      "axis_and_gaze": {"axis": "AXIS-1", "camera_side": "A", "gaze": "盯住信封封口", "screen_direction": "L2R", "cross_axis_allowed": false, "cross_axis_transition": "无"},
+      "visual_asset_calls": [],
+      "spatial_blocking": {"location_asset": "文字场景身份：普通公寓客厅", "dramatic_purpose": "让选择过程完整可读", "visibility_hearing": "人物只关注桌面但仍听见电梯", "start_positions": "桌前半步", "frame_positions": "手与信占画面中心", "movement_path": "右手伸出、撤回、再次伸出", "end_positions": "右手撕开封口", "needs_space_diagram": false},
+      "continuous_visuals": ["第一次伸手", "撤回", "听见电梯声", "第二次伸手", "拆开信封"],
+      "first_last_frame_anchors": {"first_frame": "人物停在桌前半步，右手垂下", "last_frame": "右手捏住已撕开的信封口", "locked_between": "信件位置、服装和光线连续"},
+      "key_micro_reactions": {"stimulus": "电梯声靠近", "first_reaction": "手指收回", "control": "确认门外没有停步声", "final_action": "立即拆信"},
+      "dialogue_execution": [],
+      "sound": {"onscreen": "指尖摩擦纸面与撕纸声", "ambience": "室内底噪和电梯远去", "special": "无", "bridge": "撕纸声作为尾点", "music_policy": "无BGM"},
+      "edit_interface": {"cut_in": "视线落回信件", "cut_out": "封口撕开", "action_match": true, "gaze_match": true, "sound_lead": false},
+      "continuity_locks": {"wardrobe": "深色外套", "injury_wet_dirt": "无", "hair_face": "略疲惫", "hand_props": "右手接触信件", "orientation_screen": "面向右", "physical_position": "桌前半步", "light_time_weather": "傍晚室内自然光", "other_state": "作出决定", "known_information": "仍不知道信件内容", "forbidden_future": "不得显示信内文字", "world_ability_limits": "现实规则"},
+      "next_shot_handoff": {"type": "动作尾点", "start_state": "信封已经撕开", "do_not_reset": "右手位置和信封破口"}
+    }
+  ],
+  "generation_units": [
+    {
+      "generation_unit_id": "GU001",
+      "target_video_model": "SEEDANCE_2_5",
+      "packing_policy": "30S_BLOCK",
+      "mode": "MULTI_SHOT",
+      "model_supports_multi_shot": true,
+      "duration": 30,
+      "member_edit_shots": ["SH001", "SH002"],
+      "contains_explicit_cuts": true,
+      "active_media_references": [],
+      "voice_text_assets": [],
+      "phases": [
+        {"phase_id": "PH01", "stage_goal": "完成发现", "image_and_camera": "中景缓慢前移，人物发现信后停步", "action_and_physics": "进门两步后重心停止", "performance_and_microreaction": "视线骤停、压低呼吸、确认四周", "dialogue_execution": "", "end_state": "人物重新看向信"},
+        {"phase_id": "PH02", "stage_goal": "完成选择", "image_and_camera": "明确CUT到手与信的近景", "action_and_physics": "右手伸出、撤回、再次伸出并撕开封口", "performance_and_microreaction": "电梯声触发撤回，确认安全后动作加快", "dialogue_execution": "", "end_state": "右手捏住已撕开的信封口"}
+      ],
+      "prompt_sections": {
+        "generation_goal": "生成一个30秒完整片段，以11.5秒发现镜头和18.5秒选择镜头构成，明确CUT一次",
+        "reference_roles": ["无真实媒体引用，仅使用当前文字身份"],
+        "initial_state": "人物刚进门，双手空，桌上信件未被触碰",
+        "sound": "室内底噪、电梯声、脚步和撕纸声；无BGM",
+        "keep_consistent": "服装、信件位置、傍晚光线和AXIS-1连续",
+        "local_constraints": "不得提前显示信件内容，不得把30秒窗口理解为每镜30秒"
+      }
+    }
+  ]
+}

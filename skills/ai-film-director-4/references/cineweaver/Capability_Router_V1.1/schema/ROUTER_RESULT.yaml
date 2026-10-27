@@ -1,0 +1,23 @@
+ROUTER_RESULT:
+  scene_id: ""
+
+  scene_strategy:
+    dominant_need: ""
+    routing_density: low
+    rationale: ""
+
+  active_capabilities: []
+
+  suppressed_capabilities: []
+
+  conflict_resolutions: []
+
+  downstream:
+    asset_engine: []
+    performance_engine: []
+    director_craft_engine: []
+    cinekernel: []
+    spatial_narrative_engine: []
+
+  routing_confidence: 0.0
+  unresolved: []

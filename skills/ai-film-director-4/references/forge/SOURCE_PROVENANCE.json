@@ -1,0 +1,24 @@
+{
+  "integration_contract": "AFD_MASTER_FORGE_SOURCE_PROVENANCE_V1",
+  "upstream_package": "emotion-story-forge-complete-v1.1.4-minimal-writer-generalization-2026-09-01",
+  "upstream_version": "v1.1.4",
+  "note": "Critical Forge method/renderer files copied from the user-provided upstream package and hash-locked. source_skill.md files carry only a non-executable integration warning header.",
+  "critical_files": [
+    {
+      "path": "references/forge/source/emotion-story-forge/scripts/render_emotion_map.py",
+      "sha256": "8dec68809ea79997c3043dcbac73ad7b78ace880efb0d2729bb6272ccda305b7"
+    },
+    {
+      "path": "references/forge/source/emotion-story-forge/assets/emotion-map-template.html",
+      "sha256": "6b9d6e3f391bef2fa8c6ac78964fb2a944452e934a67612579b6b41920fff82f"
+    },
+    {
+      "path": "references/forge/source/emotion-narrative-engine/references/adaptive-emotion-state-model.md",
+      "sha256": "139c041777c114b59d6cdca656ae50637d280b8dc62d28a6b5ab08fe95bead05"
+    },
+    {
+      "path": "references/forge/source/human-truth-screenwriter/references/upgrade-pipeline.md",
+      "sha256": "c4f7104a13a5f42db42b5826b72058feabb5b272d5b0a35f65748202e3f774e9"
+    }
+  ]
+}

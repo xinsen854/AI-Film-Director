@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Story Coverage Ledger",
+  "type": "object",
+  "required": ["schema_version", "project_id", "enabled", "story_atoms", "scenes", "dialogues", "information"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "enabled": {"type": "boolean"},
+    "story_atoms": {
+      "type": "object",
+      "required": ["required_atom_count", "covered_atom_count", "coverage_percentage", "covered_atom_ids", "uncovered_atom_ids", "items"]
+    },
+    "scenes": {
+      "type": "object",
+      "required": ["required_scene_ids", "covered_scene_ids", "missing_scene_ids"]
+    },
+    "dialogues": {
+      "type": "object",
+      "required": ["required_dialogue_atom_ids", "covered_dialogue_atom_ids", "missing_dialogue_atom_ids", "items"]
+    },
+    "information": {
+      "type": "object",
+      "required": ["early_reveal_info_ids", "uncovered_reveal_info_ids", "items"]
+    }
+  },
+  "additionalProperties": true
+}

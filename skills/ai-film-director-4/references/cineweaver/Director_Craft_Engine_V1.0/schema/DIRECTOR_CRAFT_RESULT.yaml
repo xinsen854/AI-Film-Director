@@ -1,0 +1,39 @@
+DIRECTOR_CRAFT_RESULT:
+  scene_id: ""
+
+  scene_expression_goal:
+    dominant_read: ""
+    preserve_ambiguity: []
+    externalization_level: low
+
+  beat_expressions:
+    - beat_id: ""
+      dramatic_action: ""
+      internal_change: ""
+      visible_carriers: []
+      reaction_logic: ""
+      relationship_behavior: ""
+      attention_priority:
+        primary: ""
+        secondary: []
+        avoid_competing_signals: []
+      rhythm_note: ""
+      space_note: ""
+      free_space: []
+
+  character_expression: {}
+
+  audience_reading:
+    primary: ""
+    secondary: []
+    avoid_competing_signals: []
+
+  expression_channels_used: []
+
+  handoff_to_shot_design:
+    must_be_readable: []
+    should_be_preserved: []
+    may_be_free: []
+
+  confidence: 0.0
+  ambiguities: []

@@ -1,0 +1,128 @@
+policy:
+  guidance_only: true
+  signal_does_not_force_activation: true
+  custom_capabilities_allowed_if_registered_downstream: true
+  no_fixed_capability_count: true
+  no_scene_type_method_taxonomy: true
+
+signal_guidance:
+
+  objective_or_tactic_change:
+    candidates:
+      - OBJECTIVE
+      - TACTIC
+      - TACTIC_SHIFT
+      - BEAT_CHANGE
+      - ACTION
+
+  subtext_high:
+    candidates:
+      - SUBTEXT
+      - LISTENING_REACTION
+      - REACTION
+      - EYE_LIFE
+
+  relationship_shift:
+    candidates:
+      - POWER_SHIFT
+      - PROXEMICS
+      - STATUS_BEHAVIOR
+      - LISTENING_REACTION
+
+  reaction_importance_high:
+    candidates:
+      - LISTENING_REACTION
+      - REACTION
+      - EYE_LIFE
+
+  information_change:
+    candidates:
+      - INFORMATION
+      - BEAT_CHANGE
+      - REACTION
+
+  rhythm_change:
+    candidates:
+      - RHYTHM
+      - BEAT_CHANGE
+
+  space_function_high:
+    candidates:
+      - SPACE
+      - PROXEMICS
+
+  physical_activity_high:
+    candidates:
+      - ACTION
+      - ACTION_CAPACITY
+      - ACTION_TIMING
+      - PHYSICAL_BUSINESS
+
+  physics_risk_high:
+    candidates:
+      - PHYSICAL_CAUSALITY
+      - ACTION_CAPACITY
+
+  spatial_risk_high:
+    candidates:
+      - SPATIAL_MAP
+      - AXIS_CONTROL
+      - GAZE_BODY_ORIENTATION
+      - SPACE
+
+  identity_risk_high:
+    candidates:
+      - CHARACTER_IDENTITY_MASTER
+      - REFERENCE_ROLE_BINDING
+      - PERFORMANCE_IDENTITY
+
+  crowd_risk_high:
+    candidates:
+      - SPATIAL_MAP
+      - REFERENCE_ROLE_BINDING
+      - REACTION
+      - SPACE
+
+  persistent_visual_state:
+    candidates:
+      - VISUAL_STATE_ASSET
+      - PROP_STATE
+      - LOCATION_STATE
+
+  complex_route_or_chase:
+    candidates:
+      - SPATIAL_TOPOLOGY
+      - ROUTE_PLANNING
+      - THREAT_GEOGRAPHY
+
+  occlusion_or_visibility_dependency:
+    candidates:
+      - VISIBILITY_RELATION
+      - OCCLUSION_CHOREOGRAPHY
+      - SPATIAL_TOPOLOGY
+
+  landmark_memory_required:
+    candidates:
+      - LANDMARK_MEMORY
+      - SPATIAL_TOPOLOGY
+
+  delayed_reveal_required:
+    candidates:
+      - REVEAL_STAGING
+      - OCCLUSION_CHOREOGRAPHY
+      - VISIBILITY_RELATION
+
+  foreshadow_payoff_required:
+    candidates:
+      - FORESHADOW_PAYOFF
+      - REVEAL_STAGING
+
+  motif_progression_supported:
+    candidates:
+      - MOTIF_PROGRESSION
+      - REVEAL_STAGING
+
+notes:
+  - "Candidates must still pass necessity, deduplication, suppression, control, and downstream checks."
+  - "No signal-to-capability mapping is mandatory."
+  - "Do not create a finite scene-type or directing-method taxonomy."

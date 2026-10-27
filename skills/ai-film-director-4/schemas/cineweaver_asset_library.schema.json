@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CineWeaver V1.5 Asset Engine V4.1 authoritative asset library",
+  "type": "object",
+  "required": ["ASSET_LIBRARY"],
+  "properties": {
+    "ASSET_LIBRARY": {
+      "type": "object",
+      "required": ["project_asset_policy", "character_assets", "voice_assets", "persistent_states", "location_assets", "prop_assets", "g_assets"]
+    }
+  },
+  "additionalProperties": false,
+  "x-authoritative-reference": "references/cineweaver/Asset_Engine_V4.1/schema/ASSET_LIBRARY_V4.yaml",
+  "x-runtime-renderer": "scripts/render_asset_library.py"
+}
