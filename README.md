@@ -4,10 +4,10 @@
 
 <h1 align="center">AI Film Director · 4.7.1 Fusion</h1>
 <p align="center"><strong>Emotion-Driven Narrative & Cinematic Intelligence Framework</strong></p>
-<p align="center">从人物的内在情绪，到观众看见的故事。<br/>From inner emotional states to the stories an audience experiences.</p>
+<p align="center">From inner emotional states to the stories an audience experiences.</p>
 
 <p align="center">
-  <a href="README.zh-CN.md">简体中文</a> · <a href="#the-emotional-causality-chain">English</a> · <a href="docs/ARCHITECTURE.md">Architecture</a> · <a href="docs/COMPARISON.md">Positioning</a> · <a href="LICENSE">Apache-2.0</a>
+  <a href="README.zh-CN.md">Chinese edition</a> · <a href="docs/ARCHITECTURE.md">Architecture</a> · <a href="docs/COMPARISON.md">Comparison</a> · <a href="LICENSE">License</a>
 </p>
 
 <p align="center">
@@ -29,12 +29,12 @@ It combines **Forge** (story, screenplay, emotional authority), **Human-Truth Sc
 
 ```mermaid
 flowchart TD
-    A["Character baseline<br/>Temperament & relationships"]
-    B["Event and circumstances<br/>Information & stakes"]
-    C["Emotional state change<br/>Conflict, mixture, regulation"]
-    D["Behavior and decision<br/>Speech, silence, action"]
-    E["Cinematic expression<br/>Performance, camera, time, sound"]
-    F["Audience experience<br/>Anticipation, empathy, reappraisal"]
+    A["Character baseline<br/>Disposition and relationships"]
+    B["Event and context<br/>Information and stakes"]
+    C["Emotion changes<br/>Conflict and regulation"]
+    D["Decision and behavior<br/>Speech or action"]
+    E["Film direction<br/>Performance and camera"]
+    F["Audience experience<br/>Expectation and empathy"]
     A --> C
     B --> C
     C --> D
@@ -45,6 +45,9 @@ flowchart TD
 Emotion is **not** a rigid mapping from a label to a facial expression. Anger can become confrontation, silence, concealment or restraint depending on the character, the relationship and the stakes. The system treats those distinctions as narrative choices that require screenplay evidence, not universal psychological laws.
 
 The Forge emotional audit and audience-map renderer visualize **script-supported** states and transitions. Unknowns stay unknown; graphics cannot fabricate psychology or story facts.
+
+<p align="center"><img src="docs/assets/emotion-layers.webp" alt="Original conceptual artwork of layered emotional states within one character" width="100%" /></p>
+<p align="center"><em>One character can carry several conflicting emotional states at once.</em></p>
 
 ## What distinguishes AFD's design
 
@@ -59,6 +62,9 @@ The Forge emotional audit and audience-map renderer visualize **script-supported
 | **Revision targets the responsible layer** | Failed checks route work back toward a minimal affected owner rather than restarting every department. |
 
 These are architectural commitments and implemented checks—not a claim that AFD has been proven superior in independent film-quality studies.
+
+<p align="center"><img src="docs/assets/behavioral-choices.webp" alt="Three different behavioral choices arising under emotional pressure" width="100%" /></p>
+<p align="center"><em>Similar emotional pressure can produce confrontation, restraint, or withdrawal.</em></p>
 
 ## How the system is organized
 
@@ -89,6 +95,9 @@ The orchestrator's **20 stages**, screenplay SHA256 lock, evidence-preserving Fo
 | Emotion renderer | Character/audience emotional maps derived from audited facts | [`render_emotion_map.py`](skills/ai-film-director-4/scripts/render_emotion_map.py) |
 | CineWeaver | Scene intelligence, performance, asset/spatial/shot contracts | [`references/cineweaver/`](skills/ai-film-director-4/references/cineweaver/) |
 | AFD Production & QC | Continuity, coverage, model-aware prompts, validation, delivery | [`scripts/`](skills/ai-film-director-4/scripts/) |
+
+<p align="center"><img src="docs/assets/cinematic-storyboard.webp" alt="A progression of coherent cinematic shots designed from one narrative beat" width="100%" /></p>
+<p align="center"><em>Narrative evidence should survive the translation into performance, framing, and shot continuity.</em></p>
 
 ## Eight formal production deliverables
 
@@ -131,6 +140,7 @@ Use the [`skills/ai-film-director-4/`](skills/ai-film-director-4/) directory as 
 - **Human creative authority:** The default screenplay policy pauses for approval before lock (`REVIEW_BEFORE_LOCK`).
 - **Model claims are conditional:** Video length limits, media roles and capabilities must be verified for the selected generation service.
 - **Quality claims require evaluation:** Unit tests check programmatic contracts; they do not independently prove that scenes move viewers or outperform other film systems.
+- **Illustration disclosure:** The cinematic images in this README are original conceptual artwork for documentation, not films rendered by AFD itself.
 
 ## Relationship to other projects
 

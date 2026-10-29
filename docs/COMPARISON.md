@@ -1,6 +1,6 @@
 # Positioning Among Open AI Filmmaking Projects
 
-[Home](../README.md) · [中文首页](../README.zh-CN.md)
+[Home](../README.md) · [Chinese edition](COMPARISON.zh-CN.md)
 
 The projects below do not all optimize for the same problem. This document distinguishes documented architecture from experimentally measured performance. **It is not a quality ranking.**
 

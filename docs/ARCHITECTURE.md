@@ -1,6 +1,6 @@
 # AFD 4.7.1 Fusion — Technical Architecture
 
-[Home](../README.md) · [中文首页](../README.zh-CN.md)
+[Home](../README.md) · [Chinese edition](ARCHITECTURE.zh-CN.md)
 
 ## Why the system starts with emotion
 
